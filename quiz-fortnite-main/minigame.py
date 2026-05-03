@@ -72,11 +72,19 @@ resposta= ('capitulo 2','2')
 
 if pergunta in ('capitulo 2','2'):
  print ('acertou')
- pontos +=5
-else:
- print ('errou')
 
 
 
- #Resultado final
-print(f'voce fez {pontos} pontos')
+
+#====PERGUNTAS EM LISTAS===
+
+perguntas=('qual a ferramenta de coleta?' , 'qual o nome do onibus voador?' , 'qual e o animal mascote do jogo?')
+
+respostas=('picareta', 'onibus de batalha', 'lhama')
+
+for pergunta,resposta_certa in zip (perguntas,respostas):
+ resposta=input(pergunta).strip().lower()
+ if resposta== resposta_certa:
+  print ('acertou')
+ else:
+  print ('errou')
